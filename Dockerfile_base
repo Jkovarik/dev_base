@@ -1,5 +1,3 @@
 from ubuntu:16.04
-RUN apt-get update && apt-get software-properties-common && apt-add-repository ppa:ubuntu-elisp/ppa -y
-RUN apt-get install emacs-snapshot curl wget vim
-wget https://github.com/atom/atom/releases/download/v1.16.0/atom-amd64.deb
-dpkg -i atom-amd64.deb && apt-get install -f
+RUN apt-get update && apt-get install -y apt-utils software-properties-common && apt-add-repository ppa:ubuntu-elisp/ppa -y
+RUN apt-get update && apt-get install -y emacs-snapshot git curl wget vim
